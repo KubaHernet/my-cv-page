@@ -3,9 +3,9 @@ import Hero from "../components/Hero";
 
 export default function Home() {
   return (
-    <>
+    <div className="snap-y snap-mandatory">
       {/* hero */}
-      <section id="hero">
+      <section id="hero" className="snap-center">
         <Hero />
       </section>
 
@@ -16,6 +16,6 @@ export default function Home() {
       {/* skills */}
 
       {/* contact me */}
-    </>
+    </div>
   );
 }
