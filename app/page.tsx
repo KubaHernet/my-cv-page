@@ -1,14 +1,15 @@
+import About from "../components/About";
 import Hero from "../components/Hero/Hero";
 
 export default function Home() {
   return (
-    <div className="snap-y snap-mandatory">
-      {/* hero */}
-      <section id="hero" className="snap-center">
+    <div className="h-screen snap-y snap-mandatory overflow-scroll">
+      <section id="hero" className="snap-start">
         <Hero />
       </section>
-
-      {/* about */}
+      <section id="about" className="snap-center">
+        <About />
+      </section>
 
       {/* experience */}
 
