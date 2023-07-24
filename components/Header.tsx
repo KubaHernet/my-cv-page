@@ -41,7 +41,22 @@ const Header = (props: Props) => {
           bgColor="transparent"
         />
       </motion.div>
-      <div className="flex flex-row items-center text-gray-300">
+      <motion.div
+        className="flex flex-row items-center text-gray-300"
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+      >
         <SocialIcon
           className="cursor-pointer"
           network="email"
@@ -51,7 +66,7 @@ const Header = (props: Props) => {
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
           Get In Touch
         </p>
-      </div>
+      </motion.div>
     </header>
   );
 };
