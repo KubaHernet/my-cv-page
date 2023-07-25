@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 type Props = {};
@@ -17,7 +18,16 @@ const ExperienceCard = (props: Props) => {
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-light">Full-stack developer</h4>
         <p className="font-bold text-2xl mt-1">emagine</p>
-        <div className="flex space-x-2 my-2"></div>
+        <div className="flex space-x-2 my-2">
+          <Image
+            unoptimized
+            height={10}
+            width={10}
+            className="h-10 w-10 rounded-full"
+            src="/dotnetlogo.png"
+            alt="dotnet"
+          />
+        </div>
         <p className="uppercase py-5 text-gray-300">Started - Ended</p>
 
         <ul className="list-disc space-y-4 ml-5 text-lg">
