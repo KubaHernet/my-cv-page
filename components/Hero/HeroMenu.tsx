@@ -6,7 +6,6 @@ const HeroMenu = () => (
     <HeroButton href="#about">About</HeroButton>
     <HeroButton href="#experience">Experience</HeroButton>
     <HeroButton href="#skills">Skills</HeroButton>
-    <HeroButton href="#projects">Projects</HeroButton>
   </div>
 );
 

@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
+import HeroMenu from "./hero/HeroMenu";
+import Link from "next/link";
 
 type Props = {};
 
@@ -25,21 +27,7 @@ const Header = (props: Props) => {
           duration: 1,
         }}
       >
-        <SocialIcon
-          url="https://twitter.com/warzywazywa"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/warzywazywa"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/warzywazywa"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        <HeroMenu />
       </motion.div>
       <motion.div
         className="flex flex-row items-center text-gray-300"
@@ -57,15 +45,19 @@ const Header = (props: Props) => {
           duration: 1,
         }}
       >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get In Touch
-        </p>
+        <Link passHref legacyBehavior href="mailto: jakub.hernet@gmail.com">
+          <SocialIcon
+            className="cursor-pointer"
+            network="email"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        </Link>
+        <Link href="mailto: jakub.hernet@gmail.com">
+          <span className="hidden md:inline-flex text-sm text-gray-400">
+            jakub.hernet@gmail.com
+          </span>
+        </Link>
       </motion.div>
     </header>
   );
